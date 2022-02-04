@@ -8,25 +8,19 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        tools:context=".QrcodeScanActivity">
+        tools:context=".MyBarcodeReaderActivity">
 
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="QR코드리더"
-            android:onClick="startBarcodeReader"/>
+            android:text="QR 코드를 스캔하여 주세요"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="QR코드리더 커스텀"
-            android:onClick="startBarcodeReaderCustom"/>
-
-        <ImageView
-            android:id="@+id/scannedBitmap"
-            android:layout_width="200dp"
-            android:layout_height="200dp"/>
-
+        <com.journeyapps.barcodescanner.DecoratedBarcodeView
+            android:id="@+id/barcodeScanner"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            zxing_scanner_layout="@layout/custom_barcode_scanner"/>
 
     </LinearLayout>
+
 </layout>
